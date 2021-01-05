@@ -1,0 +1,101 @@
+commands.ge.common.invalid_item=Ошибка: Предмет не найден.
+commands.ge.common.invalid_meta=Ошибка: Неверная meta.
+commands.ge.common.invalid_amount=Ошибка: Количество не может быть меньше 1.
+commands.ge.common.invalid_price=Вы не можете заплатить кому-либо отрицательную сумму. Это было бы грубо.
+commands.ge.common.invalid_nbt=Указан неверный NBT.
+commands.ge.common.invalid_offer_number=Неверный номер сделки.
+commands.ge.common.wrong_offer_type=Неверный тип сделки.
+commands.ge.common.not_player=Вы должны быть игроком, чтобы сделать это.
+commands.ge.common.invalid_page=Невреный номер страницы.
+commands.ge.common.no_results=Результатов не найдено.
+commands.ge.common.not_buying_or_selling=Вы ничего не покупаете и не продаете.
+commands.ge.common.untradeable=Этот предмет нельзя продать при помощи торговой площадки.
+commands.ge.common.not_holding_anything=Error: Вы не держите ничего.
+commands.ge.common.regex=Invalid regex search: %s
+commands.ge.common.not_enough_tax=У вас недостаточно %s чтобы заплатить за это налог. Необходимо: %s.
+
+commands.ge.common.offer_fulfilled_balance=Сделка совершена. Ваш баланс теперь: %s
+commands.ge.common.offer_made_balance=Сделка совершена. Ваш баланс теперь: %s
+commands.ge.common.offer_made=Сделка совершена. 
+
+commands.ge.usage=/ge <комманда> [параметры]
+
+commands.ge.buy.usage=/ge buy <предмет> <meta> <количество> <цена> [nbt] или /ge buy <номер сделки> [количество]
+commands.ge.buy.description=Купить предмет с торговой площадки. Либо выставьте предложение о покупке по своей цене, либо укажите номер сделки для покупки.
+commands.ge.buy.success_completed=Сделка совершена. Ваш баланс теперь: %s. Вы можете получить свои предметы с помощью /ge collect
+
+commands.ge.opbuy.usage=/ge opbuy <предмет> <meta> <цена> [nbt]
+commands.ge.opbuy.description=Создайте неограниченное предложение покупки предмета от имени сервера. Вы не получите предметы и не потратите валюту.
+
+commands.ge.buyoffers.usage=/ge buyoffers [фильтр] [страница]
+commands.ge.buyoffers.description=Посмотреть предложения о покупке. Используйте фильтр, если вы хотите найти определенный элемент, регулярное выражение поддерживается.
+commands.ge.buyoffers.none=Никто ничего не покупает.
+
+commands.ge.canceloffer.usage=/ge canceloffer <buy|sell|any> <фильтр> [meta] [цена] или /ge canceloffer <номер сделки>
+commands.ge.canceloffer.description=Отмените все свои сделки, соответствующие указанным критериям, или определенную сделку, используя её номер.
+commands.ge.canceloffer.invalid_criteria=Не найдено сделок, соответствующих вашим критериям.
+commands.ge.canceloffer.success_buy=Сделка отменена: %s.
+commands.ge.canceloffer.success_sell=Сделка отменена: %s. Вы можете получить свои предметы с помощью /ge collect
+
+commands.ge.collect.usage=/ge collect [фильтр]
+commands.ge.collect.description=Получайте предметы из ваших частично или полностью выполненных сделок покупки. Используйте фильтр, чтобы указать, какой предмет вы хотите получить.
+commands.ge.collect.no_more_room=У вас закончилось место для получения. Освободите место в инвентаре и попробуйте еще раз.
+commands.ge.collect.success=Получено успешно.
+commands.ge.collect.nothing_to_collect=Вам нечего получать.
+commands.ge.collect.nothing_to_collect_filter=У вас нет ничего подходящего "%s" чтобы получить.
+
+commands.ge.identify.usage=/ge identify
+commands.ge.identify.description=Определите id и meta предмета, который вы держите.
+commands.ge.identify.success=Этот предмет: %s
+
+commands.ge.myoffers.usage=/ge myoffers [filter] [page]
+commands.ge.myoffers.description=Просмотрите свои предложения. Используйте фильтр, если вы хотите найти определенный элемент (regex поддерживается).
+commands.ge.myoffers.no_buy_results=No buy results found.
+commands.ge.myoffers.no_sell_results=No sell results found.
+
+commands.ge.opoffers.usage=/ge opoffers [filter] [page]
+commands.ge.opoffers.description=Просмотрите неограниченные предложения сервера. Используйте фильтр, если хотите найти конкретный предмет (regex поддерживается).
+
+commands.ge.sell.usage=/ge sell <item> <meta> <amount> <price> [nbt] or /ge sell <offer number> [amount]
+commands.ge.sell.description=Продать товар на торговой площадке. Либо выставьте предложение о продаже по своей цене, либо укажите номер сделки для продажи. Предметы, которые вы продаете, будут удалены из вашего инвентаря. Владельцы сервера могут указать невозмещаемый налог, который необходимо при этом заплатить.
+commands.ge.sell.not_enough_items=Error: You do not have enough of that item in your inventory to make this offer.
+commands.ge.sell.failed=Error: Something went wrong when removing items from your inventory.
+
+commands.ge.opsell.usage=/ge opsell <item> <meta> <price> [nbt]
+commands.ge.opsell.description=Create an unlimited sell offer for an item on behalf of the server. You will not receive the currency or lose any items.
+
+commands.ge.selloffers.usage=/ge selloffers [filter] [page]
+commands.ge.selloffers.description=View sell offers. Use a filter if you wish to look for a specific item, regex is supported.
+commands.ge.selloffers.none=Nobody is selling anything.
+
+commands.ge.sellthis.usage=/ge sellthis <amount> <price>
+commands.ge.sellthis.description=Sell the item you are holding on the market. Items you are selling will be taken from your inventory. Server owners may specify a non-refundable tax that must be paid when doing this.
+
+commands.ge.opsellthis.usage=/ge opsellthis <price>
+commands.ge.opsellthis.description=Create an unlimited sell offer for the item you are holding on behalf of the server. You will not receive the currency or lose any items.
+
+commands.ge.help.usage=/ge help [page|subcommand]
+commands.ge.help.description=The Grand Exchange help command.
+commands.ge.help.format=%s: %s
+commands.ge.help.invalid=Invalid help parameter: %s. Please enter a page number or subcommand.
+
+ge.buyoffer=[ID: %s] %s x %s wanted for %s each.
+ge.buyoffer_nbt=[ID: %s] %s x %s with NBT %s wanted for %s each.
+ge.buyoffer.fulfilled=Grand Exchange: Finished buying %s x %s at %s each.
+ge.buyoffer.fulfilled_nbt=Grand Exchange: Finished buying %s x %s with NBT %s at %s each.
+ge.buyoffer.fulfilled_partial=Grand Exchange: Bought %s/%s x %s.
+ge.buyoffer.fulfilled_partial_nbt=Grand Exchange: Bought %s/%s x %s with NBT %s.
+
+ge.selloffer=[ID: %s] %s x %s being sold for %s each.
+ge.selloffer_nbt=[ID: %s] %s x %s with NBT %s being sold for %s each.
+ge.selloffer.fulfilled=Grand Exchange: Finished selling %s x %s at %s each.
+ge.selloffer.fulfilled_nbt=Grand Exchange: Finished selling %s x %s with NBT %s at %s each.
+ge.selloffer.fulfilled_partial=Grand Exchange: Sold %s/%s x %s.
+ge.selloffer.fulfilled_partial_nbt=Grand Exchange: Sold %s/%s x %s with NBT %s.
+
+ge.invalidoffer=Invalid offer: %s x %s for %s each.
+ge.invalidoffer_nbt=Invalid offer: %s x %s with NBT %s for %s each.
+
+ge.chat.page.next=[Next]
+ge.chat.page.prev=[Previous]
+ge.chat.page.num=Page: %s/%s
